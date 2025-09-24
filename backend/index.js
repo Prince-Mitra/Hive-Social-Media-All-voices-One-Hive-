@@ -14,9 +14,12 @@ dotenv.config()
 
 const port=process.env.PORT || 5000
 app.use(cors({
-    origin:"https://hive-ie0g.onrender.com",
-    credentials:true
-}))
+    origin: "https://hive-ie0g.onrender.com",
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+}));
+
 app.use(express.json())
 app.use(cookieParser())
 
