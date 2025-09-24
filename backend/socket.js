@@ -8,6 +8,7 @@ const io=new Server(server,{
     cors:{
         origin:"https://hive-ie0g.onrender.com",
         methods:["GET","POST"]
+         credentials: true  
     }
 })
 
